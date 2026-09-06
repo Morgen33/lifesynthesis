@@ -52,15 +52,31 @@ export const contactIntents = [
 
 export type ContactIntentId = (typeof contactIntents)[number]["id"];
 
+const contactIntentsById: Record<
+  ContactIntentId,
+  (typeof contactIntents)[number]
+> = Object.fromEntries(contactIntents.map((item) => [item.id, item])) as Record<
+  ContactIntentId,
+  (typeof contactIntents)[number]
+>;
+
 export function isContactIntent(value: string | null): value is ContactIntentId {
   return contactIntents.some((item) => item.id === value);
 }
 
 export function getContactIntent(id: ContactIntentId) {
-  const found = contactIntents.find((item) => item.id === id);
-  if (!found) {
-    const unreachable: never = id;
-    throw new Error(`Unhandled contact intent: ${unreachable}`);
+  switch (id) {
+    case "general":
+    case "lifepod":
+    case "lifehouse":
+    case "demonstration":
+    case "campus":
+    case "research":
+    case "partner":
+      return contactIntentsById[id];
+    default: {
+      const unreachable: never = id;
+      throw new Error(`Unhandled contact intent: ${unreachable}`);
+    }
   }
-  return found;
 }
