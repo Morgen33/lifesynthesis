@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #061428;
+  --ocean: #0b2744;
+  --crystal: #5ab4de;
+  --ice: #e8f4fb;
+  --cyan: #7ee0ff;
+  --silver: #c8d4dc;
+  --sun: #e8c98a;
+  --leaf: #7ea87a;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-ocean: var(--ocean);
+  --color-crystal: var(--crystal);
+  --color-ice: var(--ice);
+  --color-cyan: var(--cyan);
+  --color-silver: var(--silver);
+  --color-sun: var(--sun);
+  --color-leaf: var(--leaf);
+  --color-background: var(--navy);
+  --color-foreground: var(--ice);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-instrument);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--navy);
+  color: var(--ice);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--crystal) 45%, transparent);
+  color: white;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(color-mix(in oklab, white 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, white 6%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.glass {
+  background: color-mix(in oklab, var(--navy) 72%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.editorial-shadow {
+  text-shadow: 0 18px 60px rgb(6 20 40 / 0.45);
+}
