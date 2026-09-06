@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { PartnershipsSection } from "@/components/home/PartnershipsSection";
-import { PageHero } from "@/components/layout/PageHero";
+import { PartnershipsContent } from "@/components/pages/page-content";
 
 export const metadata: Metadata = {
   title: "Partnerships",
@@ -9,14 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function PartnershipsPage() {
-  return (
-    <>
-      <PageHero
-        kicker="Partnerships"
-        title="Build the next system with us."
-        lede="From a single LifePod to a regenerative campus — partnership is how this infrastructure actually gets constructed."
-      />
-      <PartnershipsSection />
-    </>
-  );
+  return <PartnershipsContent />;
 }

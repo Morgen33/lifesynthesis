@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { TechnologySection } from "@/components/home/TechnologySection";
-import { SolaRoofSection } from "@/components/home/SolaRoofSection";
-import { PageHero } from "@/components/layout/PageHero";
+import { TechnologyContent } from "@/components/pages/page-content";
 
 export const metadata: Metadata = {
   title: "Technology",
@@ -10,17 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function TechnologyPage() {
-  return (
-    <>
-      <PageHero
-        kicker="Technology"
-        title="Engineering inspired by life."
-        lede="Closed ecological systems, dynamic envelopes and geometry-driven structure — instruments for habitats that produce more than they consume."
-      />
-      <TechnologySection />
-      <div id="solaroof">
-        <SolaRoofSection />
-      </div>
-    </>
-  );
+  return <TechnologyContent />;
 }

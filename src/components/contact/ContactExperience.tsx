@@ -13,7 +13,11 @@ import {
 const fieldClass =
   "mt-3 w-full border-0 border-b border-white/20 bg-transparent px-0 py-3 text-base text-ice placeholder:text-ice/30 outline-none transition-colors focus:border-cyan";
 
-export function ContactExperience() {
+export function ContactExperience({
+  priority = true,
+}: {
+  priority?: boolean;
+}) {
   const params = useSearchParams();
   const [intent, setIntent] = useState<ContactIntentId>("general");
   const [sent, setSent] = useState(false);
@@ -30,7 +34,7 @@ export function ContactExperience() {
         src={active.image}
         alt={active.imageAlt}
         fill
-        priority
+        priority={priority}
         sizes="100vw"
         className="object-cover"
       />
