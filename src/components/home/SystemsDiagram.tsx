@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -78,10 +79,14 @@ export function SystemsDiagram() {
           <circle cx="200" cy="200" r="54" fill="#0B2744" stroke="#7EE0FF" strokeOpacity="0.6" />
         </svg>
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-1/2 top-1/2 w-28 -translate-x-1/2 -translate-y-1/2 text-center">
-            <p className="text-[10px] tracking-[0.22em] uppercase text-cyan">
-              LifeSynthesis
-            </p>
+          <div className="absolute left-1/2 top-1/2 flex w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center">
+            <Image
+              src="/brand/logo-mark.png"
+              alt=""
+              width={56}
+              height={56}
+              className="h-12 w-12 object-contain"
+            />
           </div>
           {systems.map((label, i) => {
             const a = (i / systems.length) * Math.PI * 2 - Math.PI / 2;

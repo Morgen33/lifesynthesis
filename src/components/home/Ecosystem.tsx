@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -59,10 +60,14 @@ export function Ecosystem() {
       </h2>
 
       <div className="relative mx-auto mt-16 h-[420px] max-w-[640px] sm:h-[520px]">
-        <div className="absolute left-1/2 top-1/2 z-10 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-navy/20 bg-white shadow-[0_0_80px_rgba(94,180,222,0.25)]">
-          <span className="px-3 text-center text-[10px] tracking-[0.18em] uppercase">
-            LifeSynthesis
-          </span>
+        <div className="absolute left-1/2 top-1/2 z-10 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-navy/15 bg-white shadow-[0_0_80px_rgba(94,180,222,0.25)]">
+          <Image
+            src="/brand/logo-mark.png"
+            alt=""
+            width={72}
+            height={72}
+            className="h-16 w-16 object-contain"
+          />
         </div>
         {nodes.map((node) => {
           const rad = (node.angle * Math.PI) / 180;
