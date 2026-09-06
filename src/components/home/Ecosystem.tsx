@@ -1,44 +1,42 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 
 const nodes = [
   {
     id: "lifepod",
     href: "/lifepod",
+    index: "01",
     title: "LifePod",
-    angle: -90,
     body: "Personal regenerative food-production system.",
   },
   {
     id: "lifehouse",
     href: "/lifehouse",
+    index: "02",
     title: "LifeHouse",
-    angle: -18,
     body: "Regenerative human habitat.",
   },
   {
     id: "lifefarms",
     href: "/lifefarms",
+    index: "03",
     title: "LifeFarms",
-    angle: 54,
     body: "Distributed controlled-environment agriculture.",
   },
   {
     id: "communities",
     href: "/communities",
+    index: "04",
     title: "LifeCommunities",
-    angle: 126,
     body: "Connected regenerative neighborhoods.",
   },
   {
     id: "campuses",
     href: "/communities#campuses",
+    index: "05",
     title: "Regenerative Campuses",
-    angle: 198,
     body: "Integrated infrastructure for corporations, institutions and communities.",
   },
 ] as const;
@@ -52,64 +50,60 @@ export function Ecosystem() {
       id="ecosystem"
       className="relative overflow-hidden bg-ice px-5 py-28 text-navy lg:px-10 lg:py-36"
     >
-      <p className="text-center text-[11px] tracking-[0.28em] uppercase text-ocean/70">
+      <p className="text-[11px] tracking-[0.28em] uppercase text-ocean/70">
         The LifeSynthesis ecosystem
       </p>
-      <h2 className="mx-auto mt-4 max-w-4xl text-center font-serif text-4xl sm:text-6xl">
+      <h2 className="mt-4 max-w-4xl font-serif text-4xl sm:text-6xl">
         Architecture, biology and infrastructure as one operating system.
       </h2>
+      <p className="mt-6 max-w-2xl text-lg text-navy/65">
+        Each program is its own page. Start with the layer that matches the work
+        you want to build.
+      </p>
 
-      <div className="relative mx-auto mt-16 h-[420px] max-w-[640px] sm:h-[520px]">
-        <div className="absolute left-1/2 top-1/2 z-10 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-navy/15 bg-white shadow-[0_0_80px_rgba(94,180,222,0.25)]">
-          <Image
-            src="/brand/logo-mark.png"
-            alt=""
-            width={72}
-            height={72}
-            className="h-16 w-16 object-contain"
-          />
-        </div>
-        {nodes.map((node) => {
-          const rad = (node.angle * Math.PI) / 180;
-          const x = 50 + Math.cos(rad) * 38;
-          const y = 50 + Math.sin(rad) * 38;
-          const selected = active === node.id;
-          return (
-            <button
-              key={node.id}
-              type="button"
-              onClick={() => setActive(node.id)}
-              className={`absolute z-20 -translate-x-1/2 -translate-y-1/2 rounded-full border px-4 py-3 text-[10px] tracking-[0.16em] uppercase transition ${
-                selected
-                  ? "border-navy bg-navy text-ice"
-                  : "border-navy/20 bg-white/80 text-navy hover:border-navy/50"
-              }`}
-              style={{ left: `${x}%`, top: `${y}%` }}
-              aria-pressed={selected}
-            >
-              {node.title}
-            </button>
-          );
-        })}
-      </div>
+      <div className="mt-16 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
+        <ol className="divide-y divide-navy/10 border-y border-navy/10">
+          {nodes.map((node) => {
+            const selected = active === node.id;
+            return (
+              <li key={node.id}>
+                <button
+                  type="button"
+                  onMouseEnter={() => setActive(node.id)}
+                  onFocus={() => setActive(node.id)}
+                  onClick={() => setActive(node.id)}
+                  className={`flex w-full items-baseline gap-6 py-5 text-left transition ${
+                    selected ? "text-navy" : "text-navy/45 hover:text-navy/80"
+                  }`}
+                  aria-pressed={selected}
+                >
+                  <span className="w-8 text-[11px] tracking-[0.2em] uppercase">
+                    {node.index}
+                  </span>
+                  <span className="font-serif text-3xl sm:text-5xl">
+                    {node.title}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ol>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current.id}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -8 }}
-          className="mx-auto max-w-xl text-center"
-        >
-          <p className="text-lg leading-relaxed text-navy/75">{current.body}</p>
+        <div className="rounded-3xl border border-navy/10 bg-white p-8 shadow-[0_30px_80px_rgba(11,39,68,0.08)] lg:p-10">
+          <p className="text-[11px] tracking-[0.22em] uppercase text-ocean">
+            {current.index} / {current.title}
+          </p>
+          <p className="mt-5 font-serif text-3xl leading-tight text-navy">
+            {current.body}
+          </p>
           <Link
             href={current.href}
-            className="mt-6 inline-flex text-[11px] tracking-[0.22em] uppercase text-ocean"
+            className="mt-8 inline-flex items-center rounded-full bg-navy px-6 py-3 text-[11px] tracking-[0.2em] uppercase text-ice transition hover:bg-ocean"
           >
-            Open {current.title} →
+            Open {current.title}
           </Link>
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      </div>
     </section>
   );
 }
