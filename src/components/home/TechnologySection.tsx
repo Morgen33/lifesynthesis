@@ -67,7 +67,7 @@ export function TechnologySection() {
   const active = modules.find((m) => m.id === open) ?? modules[0];
 
   return (
-    <section className="bg-[#040d1a] px-5 py-28 lg:px-10 lg:py-36">
+    <section id="technology" className="bg-[#040d1a] px-5 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1600px]">
         <p className="text-[11px] tracking-[0.28em] uppercase text-crystal">
           Technology

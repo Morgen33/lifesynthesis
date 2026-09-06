@@ -7,50 +7,23 @@ type PageHeroProps = {
   lede: string;
   image?: string;
   imageAlt?: string;
-  heading?: "h1" | "h2";
-  embedded?: boolean;
 };
 
-export function PageHero({
-  kicker,
-  title,
-  lede,
-  heading = "h1",
-  embedded = false,
-}: PageHeroProps) {
-  const Heading = heading;
+export function PageHero({ kicker, title, lede }: PageHeroProps) {
   return (
-    <header
-      className={`bg-navy px-5 pb-16 lg:px-10 lg:pb-24 ${
-        embedded ? "pt-24 lg:pt-32" : "pt-36 lg:pt-44"
-      }`}
-    >
+    <header className="bg-navy px-5 pb-16 pt-36 lg:px-10 lg:pb-24 lg:pt-44">
       <div className="mx-auto max-w-[1100px]">
         {kicker ? (
           <p className="text-[11px] tracking-[0.28em] uppercase text-crystal">
             {kicker}
           </p>
         ) : null}
-        <Heading className="mt-4 font-serif text-5xl leading-[0.95] text-white sm:text-7xl">
+        <h1 className="mt-4 font-serif text-5xl leading-[0.95] text-white sm:text-7xl">
           {title}
-        </Heading>
+        </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ice/75">{lede}</p>
       </div>
     </header>
-  );
-}
-
-export function PageSection({
-  id,
-  children,
-}: {
-  id: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section id={id} className="scroll-mt-20 border-t border-white/10">
-      {children}
-    </section>
   );
 }
 

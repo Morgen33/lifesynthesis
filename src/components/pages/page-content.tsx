@@ -10,25 +10,13 @@ import { TechnologySection } from "@/components/home/TechnologySection";
 import { ContactExperience } from "@/components/contact/ContactExperience";
 import { PageCta, PageHero, Prose } from "@/components/layout/PageHero";
 
-type PageViewProps = {
-  embedded?: boolean;
-};
-
-function heroProps(embedded: boolean) {
-  return {
-    heading: embedded ? ("h2" as const) : ("h1" as const),
-    embedded,
-  };
-}
-
-export function VisionContent({ embedded = false }: PageViewProps) {
+export function VisionContent() {
   return (
     <>
       <PageHero
         kicker="Vision"
         title="What should human infrastructure become?"
         lede="Not a slightly greener version of what already exists. A new operating system for human life — where shelter, food, water, energy, technology and ecology work as one."
-        {...heroProps(embedded)}
       />
       <Prose>
         <p>
@@ -51,14 +39,13 @@ export function VisionContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function LifePodContent({ embedded = false }: PageViewProps) {
+export function LifePodContent() {
   return (
     <>
       <PageHero
         kicker="LifePod"
         title="A little space to make the world a better place."
         lede="A compact controlled ecological environment integrating food production, water management and climate regulation in a modular structure."
-        {...heroProps(embedded)}
       />
       <div className="px-5 lg:px-10">
         <div className="mx-auto max-w-[1100px] overflow-hidden">
@@ -68,7 +55,7 @@ export function LifePodContent({ embedded = false }: PageViewProps) {
             width={1600}
             height={1200}
             className="h-auto w-full"
-            priority={!embedded}
+            priority
           />
         </div>
       </div>
@@ -85,14 +72,13 @@ export function LifePodContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function LifeHouseContent({ embedded = false }: PageViewProps) {
+export function LifeHouseContent() {
   return (
     <>
       <PageHero
         kicker="LifeHouse"
         title="What if your home helped sustain your life?"
         lede="A home should do more than protect life. It should help life thrive."
-        {...heroProps(embedded)}
       />
       <div className="px-5 lg:px-10">
         <div className="mx-auto max-w-[1100px]">
@@ -102,7 +88,7 @@ export function LifeHouseContent({ embedded = false }: PageViewProps) {
             width={1920}
             height={1080}
             className="h-auto w-full"
-            priority={!embedded}
+            priority
           />
         </div>
       </div>
@@ -119,14 +105,13 @@ export function LifeHouseContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function LifeFarmsContent({ embedded = false }: PageViewProps) {
+export function LifeFarmsContent() {
   return (
     <>
       <PageHero
         kicker="LifeFarms"
         title="Food production as infrastructure."
         lede="Distributed controlled-environment agriculture that can sit beside homes, campuses and communities — shortening the distance between soil, water and table."
-        {...heroProps(embedded)}
       />
       <Prose>
         <p>
@@ -141,14 +126,13 @@ export function LifeFarmsContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function TechnologyContent({ embedded = false }: PageViewProps) {
+export function TechnologyContent() {
   return (
     <>
       <PageHero
         kicker="Technology"
         title="Engineering inspired by life."
         lede="Closed ecological systems, dynamic envelopes and geometry-driven structure — instruments for habitats that produce more than they consume."
-        {...heroProps(embedded)}
       />
       <TechnologySection />
       <div id="solaroof">
@@ -158,14 +142,13 @@ export function TechnologyContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function CommunitiesContent({ embedded = false }: PageViewProps) {
+export function CommunitiesContent() {
   return (
     <>
       <PageHero
         kicker="Communities"
         title="Homes as participants, not islands."
         lede="Shared food, water, energy, knowledge and resilience — connected through gardens, wetlands, pathways and ecological corridors."
-        {...heroProps(embedded)}
       />
       <CommunitySection />
       <CampusSection />
@@ -173,28 +156,26 @@ export function CommunitiesContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function PartnershipsContent({ embedded = false }: PageViewProps) {
+export function PartnershipsContent() {
   return (
     <>
       <PageHero
         kicker="Partnerships"
         title="Build the next system with us."
         lede="From a single LifePod to a regenerative campus — partnership is how this infrastructure actually gets constructed."
-        {...heroProps(embedded)}
       />
       <PartnershipsSection />
     </>
   );
 }
 
-export function ResearchContent({ embedded = false }: PageViewProps) {
+export function ResearchContent() {
   return (
     <>
       <PageHero
         kicker="Research"
         title="When AI learns to listen to nature."
         lede="LifeSynthesis treats sensing, modeling and living systems as one research program — predictive, not merely reactive."
-        {...heroProps(embedded)}
       />
       <Prose>
         <p>
@@ -211,14 +192,13 @@ export function ResearchContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function AboutContent({ embedded = false }: PageViewProps) {
+export function AboutContent() {
   return (
     <>
       <PageHero
         kicker="About"
         title="The synthesis of life and infrastructure."
         lede="LifeSynthesis is a regenerative infrastructure and human-habitat company. It is not a wellness brand, a nonprofit aesthetic, or a slightly greener housing product."
-        {...heroProps(embedded)}
       />
       <Prose>
         <p>
@@ -240,14 +220,13 @@ export function AboutContent({ embedded = false }: PageViewProps) {
   );
 }
 
-export function NewsContent({ embedded = false }: PageViewProps) {
+export function NewsContent() {
   return (
     <>
       <PageHero
         kicker="News"
         title="Field notes."
         lede="Demonstration sites, research collaborations and development partnerships will be published here as they become real."
-        {...heroProps(embedded)}
       />
       <Prose>
         <p>No public dispatches yet.</p>
@@ -264,10 +243,10 @@ function ContactFallback() {
   );
 }
 
-export function ContactContent({ embedded = false }: PageViewProps) {
+export function ContactContent() {
   return (
     <Suspense fallback={<ContactFallback />}>
-      <ContactExperience priority={!embedded} />
+      <ContactExperience />
     </Suspense>
   );
 }
