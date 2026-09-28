@@ -1,9 +1,25 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+
 export function Hero() {
+  const video = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = video.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.pause();
+      return;
+    }
+    void el.play().catch(() => {
+      /* autoplay can be blocked; poster remains */
+    });
+  }, []);
+
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
       <Image
@@ -77,24 +93,23 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.45, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="flex flex-col items-center gap-10 rounded-3xl bg-white/95 px-8 py-12 shadow-[0_40px_120px_rgba(0,0,0,0.45)] sm:px-12 sm:py-14">
-            <Image
-              src="/brand/lifesynthesis-lockup-color.png"
-              alt="LifeSynthesis"
-              width={766}
-              height={189}
-              priority
-              className="h-auto w-full max-w-[440px]"
-            />
-            <div className="h-px w-24 bg-navy/15" />
-            <Image
-              src="/brand/solaroof-logo.png"
-              alt="SolaRoof: Closed Controlled Ecological Environment"
-              width={706}
-              height={207}
-              priority
-              className="h-auto w-full max-w-[400px]"
-            />
+          <div className="relative">
+            <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-cyan/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white shadow-[0_40px_120px_rgba(0,0,0,0.5)]">
+              <video
+                ref={video}
+                className="block aspect-[1080/718] h-auto w-full"
+                poster="/videos/lifesynthesis-system-poster.jpg"
+                muted
+                loop
+                playsInline
+                autoPlay
+                preload="auto"
+                aria-label="LifeSynthesis: not just survival, regeneration. LifePods, LifeHouses, LifeFarms and CannaPods working as one regenerative life-support system."
+              >
+                <source src="/videos/lifesynthesis-system.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </motion.div>
       </div>
