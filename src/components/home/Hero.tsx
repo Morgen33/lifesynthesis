@@ -56,9 +56,9 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.9 }}
           >
-            LifeSynthesis is redesigning the systems that sustain human life —
-            bringing housing, food, water, energy, technology and ecology together
-            into regenerative infrastructure.
+            LifeSynthesis designs homes, farms and communities that grow food,
+            recycle water and generate energy. Places that give back more than
+            they take.
           </motion.p>
           <motion.div
             className="mt-10 flex flex-col gap-3 sm:flex-row"
@@ -66,9 +66,9 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.8 }}
           >
-            <Button href="#ecosystem">Explore LifeSynthesis</Button>
-            <Button href="/vision" variant="ghost">
-              Watch the vision
+            <Button href="/ecosystem">Explore the ecosystem</Button>
+            <Button href="#mission" variant="ghost">
+              Our mission
             </Button>
           </motion.div>
         </div>

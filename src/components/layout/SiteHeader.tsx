@@ -33,7 +33,7 @@ export function SiteHeader() {
         <Logo compact={scrolled} priority />
 
         <nav
-          className="hidden items-center gap-5 xl:flex"
+          className="hidden items-center gap-8 lg:flex"
           aria-label="Primary"
         >
           {primaryNav.map((item) => (
@@ -48,12 +48,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href="/partnerships"
-            className="text-[11px] tracking-[0.18em] uppercase text-ice/80 hover:text-ice"
-          >
-            Partner with us
-          </Link>
           <Link
             href="/contact"
             className="rounded-full bg-ice px-5 py-2.5 text-[11px] font-medium tracking-[0.2em] uppercase text-navy transition-colors hover:bg-white"
@@ -104,13 +98,6 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
             >
               Build the future
-            </Link>
-            <Link
-              href="/partnerships"
-              className="rounded-full border border-white/25 px-5 py-3 text-center text-[11px] tracking-[0.2em] uppercase"
-              onClick={() => setOpen(false)}
-            >
-              Partner with us
             </Link>
           </div>
         </nav>

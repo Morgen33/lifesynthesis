@@ -1,25 +1,13 @@
 export const primaryNav = [
-  { href: "/vision", label: "Vision" },
-  { href: "/lifepod", label: "LifePod" },
-  { href: "/lifehouse", label: "LifeHouse" },
-  { href: "/lifefarms", label: "LifeFarms" },
-  { href: "/technology", label: "Technology" },
-  { href: "/communities", label: "Communities" },
-  { href: "/partnerships", label: "Partnerships" },
-  { href: "/research", label: "Research" },
-  { href: "/about", label: "About" },
+  { href: "/#mission", label: "Mission" },
+  { href: "/ecosystem", label: "Ecosystem" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export const footerNav = [
-  { href: "/vision", label: "Vision" },
-  { href: "/lifepod", label: "LifePod" },
-  { href: "/lifehouse", label: "LifeHouse" },
-  { href: "/lifefarms", label: "LifeFarms" },
-  { href: "/technology", label: "Technology" },
-  { href: "/communities", label: "Communities" },
-  { href: "/research", label: "Research" },
-  { href: "/partnerships", label: "Partners" },
-  { href: "/news", label: "News" },
+  { href: "/", label: "Home" },
+  { href: "/#mission", label: "Mission & Vision" },
+  { href: "/ecosystem", label: "Ecosystem" },
   { href: "/contact", label: "Contact" },
 ] as const;
 

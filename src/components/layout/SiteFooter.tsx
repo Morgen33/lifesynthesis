@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
+import { ecosystem } from "@/content/ecosystem";
 import { footerNav, legalNav } from "@/content/nav";
 
 export function SiteFooter() {
@@ -12,12 +13,12 @@ export function SiteFooter() {
             Regenerating the systems that sustain life.
           </p>
         </div>
-        <div className="grid gap-10 sm:grid-cols-2">
+        <div className="grid gap-10 sm:grid-cols-3">
           <nav aria-label="Footer">
             <p className="mb-4 text-[11px] tracking-[0.22em] uppercase text-silver">
               Explore
             </p>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
+            <ul className="space-y-2">
               {footerNav.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -25,6 +26,23 @@ export function SiteFooter() {
                     className="text-sm text-ice/70 transition-colors hover:text-ice"
                   >
                     {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <nav aria-label="Ecosystem">
+            <p className="mb-4 text-[11px] tracking-[0.22em] uppercase text-silver">
+              Ecosystem
+            </p>
+            <ul className="space-y-2">
+              {ecosystem.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/ecosystem/${item.slug}`}
+                    className="text-sm text-ice/70 transition-colors hover:text-ice"
+                  >
+                    {item.title}
                   </Link>
                 </li>
               ))}
