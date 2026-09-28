@@ -1,25 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { SystemVideo } from "@/components/home/SystemVideo";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
-  const video = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const el = video.current;
-    if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.pause();
-      return;
-    }
-    void el.play().catch(() => {
-      /* autoplay can be blocked; poster remains */
-    });
-  }, []);
-
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
       <Image
@@ -95,21 +81,7 @@ export function Hero() {
         >
           <div className="relative">
             <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-cyan/20 blur-3xl" />
-            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white shadow-[0_40px_120px_rgba(0,0,0,0.5)]">
-              <video
-                ref={video}
-                className="block aspect-[1080/718] h-auto w-full"
-                poster="/videos/lifesynthesis-system-poster.jpg"
-                muted
-                loop
-                playsInline
-                autoPlay
-                preload="auto"
-                aria-label="LifeSynthesis: not just survival, regeneration. LifePods, LifeHouses, LifeFarms and CannaPods working as one regenerative life-support system."
-              >
-                <source src="/videos/lifesynthesis-system.mp4" type="video/mp4" />
-              </video>
-            </div>
+            <SystemVideo />
           </div>
         </motion.div>
       </div>
