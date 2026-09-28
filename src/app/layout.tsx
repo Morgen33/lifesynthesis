@@ -36,10 +36,6 @@ export const metadata: Metadata = {
     "controlled environment agriculture",
     "SolaRoof",
   ],
-  icons: {
-    icon: "/brand/logo-mark.png",
-    apple: "/brand/logo-mark.png",
-  },
   openGraph: {
     title: "LifeSynthesis — The future isn’t built. It’s grown.",
     description:

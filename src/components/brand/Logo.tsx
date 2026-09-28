@@ -24,7 +24,7 @@ export function Logo({
           src="/brand/logo-lockup.png"
           alt="LifeSynthesis"
           width={220}
-          height={248}
+          height={258}
           className="h-auto w-[148px] sm:w-[196px]"
           priority={priority}
         />
