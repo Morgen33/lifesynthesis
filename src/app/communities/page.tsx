@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { CampusSection } from "@/components/home/CampusSection";
-import { CommunitySection } from "@/components/home/CommunitySection";
-import { PageHero } from "@/components/layout/PageHero";
+import { CommunitiesContent } from "@/components/pages/page-content";
 
 export const metadata: Metadata = {
   title: "Communities",
@@ -10,15 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function CommunitiesPage() {
-  return (
-    <>
-      <PageHero
-        kicker="Communities"
-        title="Homes as participants, not islands."
-        lede="Shared food, water, energy, knowledge and resilience — connected through gardens, wetlands, pathways and ecological corridors."
-      />
-      <CommunitySection />
-      <CampusSection />
-    </>
-  );
+  return <CommunitiesContent />;
 }

@@ -30,7 +30,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-5 py-4 lg:px-10">
-        <Logo compact={scrolled} />
+        <Logo compact={scrolled} priority />
 
         <nav
           className="hidden items-center gap-5 xl:flex"

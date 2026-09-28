@@ -14,7 +14,7 @@ export function FinalCta() {
       />
       <div className="absolute inset-0 bg-navy/50" />
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-4xl flex-col items-center justify-center px-5 py-32 text-center">
-        <Logo />
+        <Logo stacked />
         <h2 className="mt-12 font-serif text-4xl leading-[0.95] text-white sm:text-6xl lg:text-7xl">
           What if the building itself
           <br />
