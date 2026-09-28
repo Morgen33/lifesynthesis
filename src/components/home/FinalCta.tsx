@@ -28,7 +28,7 @@ export function FinalCta() {
         </p>
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
           <Button href="/contact">Build with us</Button>
-          <Button href="/partnerships" variant="ghost">
+          <Button href="/contact?intent=partner" variant="ghost">
             Partner with LifeSynthesis
           </Button>
         </div>

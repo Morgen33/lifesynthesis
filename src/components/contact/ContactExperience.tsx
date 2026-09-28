@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import {
@@ -18,15 +18,17 @@ export function ContactExperience({
 }: {
   priority?: boolean;
 }) {
-  const params = useSearchParams();
-  const [intent, setIntent] = useState<ContactIntentId>("general");
+  const urlIntent = useSearchParams().get("intent");
+  const [intent, setIntent] = useState<ContactIntentId>(
+    isContactIntent(urlIntent) ? urlIntent : "general",
+  );
+  const [syncedUrlIntent, setSyncedUrlIntent] = useState(urlIntent);
+  if (urlIntent !== syncedUrlIntent) {
+    setSyncedUrlIntent(urlIntent);
+    if (isContactIntent(urlIntent)) setIntent(urlIntent);
+  }
   const [sent, setSent] = useState(false);
   const active = getContactIntent(intent);
-
-  useEffect(() => {
-    const initial = params.get("intent");
-    if (isContactIntent(initial)) setIntent(initial);
-  }, [params]);
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden">

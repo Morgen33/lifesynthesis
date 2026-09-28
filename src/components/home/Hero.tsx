@@ -3,8 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { ClosedLoop } from "@/components/home/ClosedLoop";
-
 export function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
@@ -56,9 +54,9 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.9 }}
           >
-            LifeSynthesis is redesigning the systems that sustain human life —
-            bringing housing, food, water, energy, technology and ecology together
-            into regenerative infrastructure.
+            LifeSynthesis designs homes, farms and communities that grow food,
+            recycle water and generate energy. Places that give back more than
+            they take.
           </motion.p>
           <motion.div
             className="mt-10 flex flex-col gap-3 sm:flex-row"
@@ -66,9 +64,9 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.8 }}
           >
-            <Button href="#ecosystem">Explore LifeSynthesis</Button>
-            <Button href="/vision" variant="ghost">
-              Watch the vision
+            <Button href="/ecosystem">Explore the ecosystem</Button>
+            <Button href="#mission" variant="ghost">
+              Our mission
             </Button>
           </motion.div>
         </div>
@@ -79,7 +77,25 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.45, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <ClosedLoop priority />
+          <div className="flex flex-col items-center gap-10 rounded-3xl bg-white/95 px-8 py-12 shadow-[0_40px_120px_rgba(0,0,0,0.45)] sm:px-12 sm:py-14">
+            <Image
+              src="/brand/lifesynthesis-lockup-color.png"
+              alt="LifeSynthesis"
+              width={766}
+              height={189}
+              priority
+              className="h-auto w-full max-w-[440px]"
+            />
+            <div className="h-px w-24 bg-navy/15" />
+            <Image
+              src="/brand/solaroof-logo.png"
+              alt="SolaRoof: Closed Controlled Ecological Environment"
+              width={706}
+              height={207}
+              priority
+              className="h-auto w-full max-w-[400px]"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
