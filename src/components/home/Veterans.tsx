@@ -22,7 +22,7 @@ export function Veterans() {
           <div className="overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(11,39,68,0.18)]">
             <Image
               src="/images/veterans.jpg"
-              alt="Support our veterans. The LifeSynthesis flower over an American flag and a saluting soldier. Thank you for your service."
+              alt="Support our Veterans. The LifeSynthesis flower over an American flag and a saluting soldier. Thank you for your service."
               width={687}
               height={1024}
               sizes="(min-width: 1024px) 40vw, 100vw"
@@ -37,13 +37,13 @@ export function Veterans() {
               Thank you for your service
             </p>
             <h2 className="mt-4 font-serif text-4xl leading-[0.95] sm:text-6xl">
-              LifeSynthesis supports veterans.
+              LifeSynthesis supports Veterans.
             </h2>
           </Reveal>
 
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-navy/75">
             <p>
-              Our veterans gave something to this country that can never be
+              Our Veterans gave something to this country that can never be
               repaid. Our responsibility to our heroes does not end when they
               come home.
             </p>
@@ -60,8 +60,8 @@ export function Veterans() {
               continue long after the uniform comes off.
             </p>
             <p>
-              No veteran should ever feel forgotten, abandoned, or alone. Support
-              means creating communities where veterans know they still have
+              No Veteran should ever feel forgotten, abandoned, or alone. Support
+              means creating communities where Veterans know they still have
               purpose, belonging, and a future.
             </p>
             <p>
@@ -72,7 +72,7 @@ export function Veterans() {
             <p className="font-serif text-3xl leading-tight text-navy sm:text-4xl">
               They stood for us when we needed them. Now we must stand for them.
             </p>
-            <p>Let us build a culture where every veteran knows:</p>
+            <p>Let us build a culture where every Veteran knows:</p>
           </div>
 
           <ul className="mt-8 space-y-2 border-l-2 border-ocean/40 pl-6">
