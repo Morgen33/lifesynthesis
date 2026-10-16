@@ -5,7 +5,7 @@ import { PageCta, PageHero } from "@/components/layout/PageHero";
 export const metadata: Metadata = {
   title: "Ecosystem",
   description:
-    "LifePod, LifeHouse, Life Palace, LifeFarms, CannaPod, LifeCommunities and Regenerative Campuses: the LifeSynthesis ecosystem.",
+    "LifePod, LifeHouse, LifeFarms and CannaPod: the LifeSynthesis ecosystem.",
 };
 
 export default function EcosystemPage() {
@@ -13,7 +13,7 @@ export default function EcosystemPage() {
     <>
       <PageHero
         kicker="Ecosystem"
-        title="From a single pod to a whole campus."
+        title="From a single pod to a whole farm."
         lede="Every LifeSynthesis system grows food, cycles water and supports life. Pick the scale that fits what you want to build."
       />
       <div className="mx-auto max-w-[1400px] px-5 pb-20 lg:px-10">

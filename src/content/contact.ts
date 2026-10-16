@@ -2,7 +2,7 @@ export const contactIntents = [
   {
     id: "general",
     label: "General",
-    statement: "A first conversation about what LifeSynthesis could become on your land, campus or city.",
+    statement: "A first conversation about what LifeSynthesis could become on your land or in your city.",
     image: "/images/sunrise.png",
     imageAlt: "Sunrise over regenerative glass habitats and wetlands.",
   },
@@ -26,13 +26,6 @@ export const contactIntents = [
     statement: "A place people can walk into — LifePods, LifeHouses and living systems in person.",
     image: "/images/community-aerial.png",
     imageAlt: "Aerial regenerative neighborhood connected by water and gardens.",
-  },
-  {
-    id: "campus",
-    label: "Regenerative campus",
-    statement: "Infrastructure for institutions where advanced technology and living systems operate together.",
-    image: "/images/campus.png",
-    imageAlt: "Regenerative technology campus integrated with forest and water.",
   },
   {
     id: "research",
@@ -70,7 +63,6 @@ export function getContactIntent(id: ContactIntentId) {
     case "lifepod":
     case "lifehouse":
     case "demonstration":
-    case "campus":
     case "research":
     case "partner":
       return contactIntentsById[id];

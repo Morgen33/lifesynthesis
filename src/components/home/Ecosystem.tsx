@@ -11,7 +11,7 @@ export function Ecosystem() {
               The ecosystem
             </p>
             <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-[0.95] text-white sm:text-6xl">
-              From a single pod to a whole campus.
+              From a single pod to a whole farm.
             </h2>
           </div>
           <Button href="/ecosystem" variant="ghost">

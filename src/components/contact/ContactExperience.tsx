@@ -152,7 +152,7 @@ export function ContactExperience({
                 <input
                   name="organization"
                   autoComplete="organization"
-                  placeholder="Studio, city, campus or company"
+                  placeholder="Studio, city or company"
                   className={fieldClass}
                 />
               </label>

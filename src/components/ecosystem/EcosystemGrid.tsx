@@ -4,7 +4,7 @@ import { ecosystem } from "@/content/ecosystem";
 
 export function EcosystemGrid() {
   return (
-    <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
       {ecosystem.map((item, i) => (
         <li key={item.slug}>
           <Link

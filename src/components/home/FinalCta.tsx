@@ -24,7 +24,7 @@ export function FinalCta() {
           A future where shelter, food, water, energy, technology and ecology
           work together is possible.
           <br />
-          We intend to help build it.
+          Say yes to life.
         </p>
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
           <Button href="/contact">Build with us</Button>
