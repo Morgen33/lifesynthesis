@@ -8,7 +8,7 @@ const retiredRoutes: Record<string, string> = {
   "/lifepod": "/ecosystem/lifepod",
   "/lifehouse": "/ecosystem/lifehouse",
   "/lifefarms": "/ecosystem/lifefarms",
-  "/communities": "/ecosystem/communities",
+  "/communities": "/ecosystem",
   "/technology": "/ecosystem",
   "/research": "/ecosystem",
   "/partnerships": "/contact?intent=partner",
