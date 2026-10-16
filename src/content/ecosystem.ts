@@ -7,10 +7,11 @@ export type EcosystemItem = {
   features: readonly string[];
   image: string;
   imageAlt: string;
+  video?: string;
   contactHref: string;
 };
 
-export const ecosystem = [
+export const ecosystem: readonly EcosystemItem[] = [
   {
     slug: "lifepod",
     title: "LifePod",
@@ -25,8 +26,9 @@ export const ecosystem = [
       "Thermal storage",
       "Environmental controls",
     ],
-    image: "/images/lifepod.png",
-    imageAlt: "LifePod crystalline greenhouse habitat.",
+    image: "/videos/lifepod-poster.jpg",
+    imageAlt: "A LifePod assembling: frame, growing beds and glass dome.",
+    video: "/videos/lifepod.mp4",
     contactHref: "/contact?intent=lifepod",
   },
   {
@@ -111,7 +113,7 @@ export const ecosystem = [
     imageAlt: "Regenerative technology campus integrated with forest and water.",
     contactHref: "/contact?intent=campus",
   },
-] as const satisfies readonly EcosystemItem[];
+];
 
 export function getEcosystemItem(slug: string) {
   return ecosystem.find((item) => item.slug === slug);

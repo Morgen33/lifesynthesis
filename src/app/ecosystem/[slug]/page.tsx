@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { EcosystemMedia } from "@/components/ecosystem/EcosystemMedia";
 import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
 import { ecosystem, getEcosystemItem } from "@/content/ecosystem";
@@ -42,13 +42,12 @@ export default async function EcosystemItemPage({
 
       <div className="px-5 lg:px-10">
         <div className="relative mx-auto aspect-[16/9] max-w-[1100px] overflow-hidden rounded-sm">
-          <Image
-            src={item.image}
-            alt={item.imageAlt}
-            fill
+          <EcosystemMedia
+            image={item.image}
+            imageAlt={item.imageAlt}
+            video={item.video}
             priority
             sizes="(min-width: 1100px) 1100px, 100vw"
-            className="object-cover"
           />
         </div>
       </div>

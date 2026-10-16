@@ -10,8 +10,8 @@ export const contactIntents = [
     id: "lifepod",
     label: "LifePod",
     statement: "A compact ecological environment — food, water and climate in a modular structure.",
-    image: "/images/lifepod.png",
-    imageAlt: "LifePod crystalline greenhouse habitat.",
+    image: "/videos/lifepod-poster.jpg",
+    imageAlt: "A LifePod with glass dome and growing beds.",
   },
   {
     id: "lifehouse",
