@@ -6,8 +6,8 @@ export function FinalCta() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
       <Image
-        src="/images/sunrise.png"
-        alt="Sunrise over a regenerative landscape of glass habitats and wetlands."
+        src="/images/closing-nature.jpg"
+        alt="Sunrise over misty mountains, a calm lake and pine forest."
         fill
         className="object-cover"
         sizes="100vw"

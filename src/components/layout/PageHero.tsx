@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 
 type PageHeroProps = {
@@ -44,7 +43,3 @@ export function PageCta({ href = "/contact", label = "Start a conversation" }: {
     </div>
   );
 }
-
-export const defaultOg: Pick<Metadata, "openGraph"> = {
-  openGraph: { images: ["/images/hero-community.png"] },
-};
