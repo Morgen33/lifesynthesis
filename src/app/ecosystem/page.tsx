@@ -5,7 +5,7 @@ import { PageCta, PageHero } from "@/components/layout/PageHero";
 export const metadata: Metadata = {
   title: "Ecosystem",
   description:
-    "LifePod, LifeHouse, Life Palace, LifeFarms, LifeCommunities and Regenerative Campuses: the LifeSynthesis ecosystem.",
+    "LifePod, LifeHouse, Life Palace, LifeFarms, CannaPod, LifeCommunities and Regenerative Campuses: the LifeSynthesis ecosystem.",
 };
 
 export default function EcosystemPage() {

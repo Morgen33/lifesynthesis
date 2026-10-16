@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EcosystemMedia } from "@/components/ecosystem/EcosystemMedia";
@@ -41,15 +42,39 @@ export default async function EcosystemItemPage({
       />
 
       <div className="px-5 lg:px-10">
-        <div className="relative mx-auto aspect-[16/9] max-w-[1100px] overflow-hidden rounded-sm">
-          <EcosystemMedia
-            image={item.image}
-            imageAlt={item.imageAlt}
-            video={item.video}
-            priority
-            sizes="(min-width: 1100px) 1100px, 100vw"
-          />
-        </div>
+        {item.infographic ? (
+          <a
+            href={item.infographic.src}
+            target="_blank"
+            rel="noopener"
+            className="group mx-auto block max-w-[1100px] cursor-zoom-in"
+          >
+            <span className="block overflow-hidden rounded-sm border border-white/10 transition group-hover:border-cyan/60">
+              <Image
+                src={item.infographic.src}
+                alt={item.infographic.alt}
+                width={item.infographic.width}
+                height={item.infographic.height}
+                priority
+                sizes="(min-width: 1100px) 1100px, 100vw"
+                className="h-auto w-full"
+              />
+            </span>
+            <span className="mt-3 block text-right text-[10px] tracking-[0.22em] uppercase text-ice/60 group-hover:text-cyan">
+              View full size ⤢
+            </span>
+          </a>
+        ) : (
+          <div className="relative mx-auto aspect-[16/9] max-w-[1100px] overflow-hidden rounded-sm">
+            <EcosystemMedia
+              image={item.image}
+              imageAlt={item.imageAlt}
+              video={item.video}
+              priority
+              sizes="(min-width: 1100px) 1100px, 100vw"
+            />
+          </div>
+        )}
       </div>
 
       <div className="mx-auto max-w-[1100px] px-5 py-20 lg:px-10">

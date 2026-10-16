@@ -8,6 +8,12 @@ export type EcosystemItem = {
   image: string;
   imageAlt: string;
   video?: string;
+  infographic?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
   contactHref: string;
 };
 
@@ -47,6 +53,12 @@ export const ecosystem: readonly EcosystemItem[] = [
     ],
     image: "/images/lifehouse.png",
     imageAlt: "LifeHouse regenerative residence with a living plant canopy.",
+    infographic: {
+      src: "/images/lifehouse-infographic.jpg",
+      alt: "LifeHouse, the core principle: everything essential within its footprint. Water harvesting and purification, hydrologic food production, and active climate management independent from the external grid.",
+      width: 1024,
+      height: 554,
+    },
     contactHref: "/contact?intent=lifehouse",
   },
   {
@@ -74,8 +86,38 @@ export const ecosystem: readonly EcosystemItem[] = [
       "Environmental monitoring",
       "Modular, repeatable systems",
     ],
-    image: "/images/know-farmer.png",
-    imageAlt: "Dawn light inside a crystalline greenhouse with a farmer holding seedlings.",
+    image: "/images/lifefarm.jpg",
+    imageAlt: "The LifeFarm: a tall arched glass greenhouse on a stone base.",
+    infographic: {
+      src: "/images/lifefarm-infographic.jpg",
+      alt: "The LifeSynthesis LifeFarm is the answer to food security: carbon-negative vertical farming, closed agricultural environment, 80% lower energy costs, multiple harvests a year, and farm to table in 10 miles or less.",
+      width: 1024,
+      height: 537,
+    },
+    contactHref: "/contact",
+  },
+  {
+    slug: "cannapod",
+    title: "CannaPod",
+    summary: "Controlled-environment cannabis and hemp cultivation.",
+    headline: "The next generation of cannabis and hemp agriculture.",
+    body: "The future of cannabis agriculture isn't about growing more plants. It's about growing better plants, with greater consistency, intelligence, traceability and control.",
+    features: [
+      "Controlled climate and humidity",
+      "Precision irrigation and nutrients",
+      "Environmental and biological monitoring",
+      "Tissue-culture-derived feedstock",
+      "Batch-level traceability",
+      "Water and resource efficiency",
+    ],
+    image: "/images/cannapod.jpg",
+    imageAlt: "The CannaPod: a glass dome with an arched entrance in a pine forest.",
+    infographic: {
+      src: "/images/cannapod-infographic.jpg",
+      alt: "CannaPods: building the next generation of controlled-environment cannabis and hemp agriculture, with controlled climate, precision irrigation, monitoring, tissue-culture feedstock, traceability and resource efficiency.",
+      width: 1024,
+      height: 585,
+    },
     contactHref: "/contact",
   },
   {
