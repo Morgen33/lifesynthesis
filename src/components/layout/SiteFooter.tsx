@@ -54,11 +54,6 @@ export function SiteFooter() {
             </p>
             <ul className="space-y-2 text-sm text-ice/70">
               <li>
-                <a href="https://www.linkedin.com" className="hover:text-ice">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
                 <a href="https://x.com" className="hover:text-ice">
                   X
                 </a>
