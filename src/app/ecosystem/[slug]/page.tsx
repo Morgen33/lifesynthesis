@@ -47,7 +47,11 @@ export default async function EcosystemItemPage({
             href={item.infographic.src}
             target="_blank"
             rel="noopener"
-            className="group mx-auto block max-w-[1100px] cursor-zoom-in"
+            className={`group mx-auto block cursor-zoom-in ${
+              item.infographic.height > item.infographic.width
+                ? "max-w-[720px]"
+                : "max-w-[1100px]"
+            }`}
           >
             <span className="block overflow-hidden rounded-sm border border-white/10 transition group-hover:border-cyan/60">
               <Image
