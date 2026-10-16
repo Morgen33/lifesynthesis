@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Designing a new operating system for human life: regenerative architecture, food, water, energy and ecology.",
     type: "website",
-    images: ["/images/hero-community.png"],
+    images: ["/images/closing-nature.jpg"],
   },
 };
 
