@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
-import { ecosystem } from "@/content/ecosystem";
+import { ecosystem, ecosystemPagesLive } from "@/content/ecosystem";
 import { footerNav, legalNav } from "@/content/nav";
 
 export function SiteFooter() {
@@ -38,12 +38,16 @@ export function SiteFooter() {
             <ul className="space-y-2">
               {ecosystem.map((item) => (
                 <li key={item.slug}>
-                  <Link
-                    href={`/ecosystem/${item.slug}`}
-                    className="text-sm text-ice/70 transition-colors hover:text-ice"
-                  >
-                    {item.title}
-                  </Link>
+                  {ecosystemPagesLive ? (
+                    <Link
+                      href={`/ecosystem/${item.slug}`}
+                      className="text-sm text-ice/70 transition-colors hover:text-ice"
+                    >
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <span className="text-sm text-ice/70">{item.title}</span>
+                  )}
                 </li>
               ))}
             </ul>
