@@ -23,7 +23,8 @@ export function FinalCta() {
         <p className="mt-8 max-w-xl text-lg text-ice/80">
           A future where shelter, food, water, energy, technology and ecology
           work together is possible.
-          <br />
+        </p>
+        <p className="editorial-shadow mt-8 font-serif text-4xl text-cyan sm:text-5xl lg:text-6xl">
           Say yes to life.
         </p>
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
