@@ -1,18 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
-
-const affirmations = [
-  "You are seen.",
-  "You are valued.",
-  "You are needed.",
-  "And you are never alone.",
-] as const;
-
-const pledges = [
-  "Honor their service.",
-  "Support their health.",
-  "Restore their hope.",
-] as const;
+import { Button } from "@/components/ui/Button";
 
 export function Veterans() {
   return (
@@ -50,59 +38,13 @@ export function Veterans() {
             <p className="font-serif text-3xl leading-tight text-navy sm:text-4xl">
               Service may end. Our commitment can not.
             </p>
-            <p>
-              Veterans deserve access to the very best healthcare including
-              physical healthcare, mental healthcare, rehabilitation, housing and
-              the support they need to rebuild their lives.
-            </p>
-            <p>
-              We must remember that some wounds cannot be seen. The battles may
-              continue long after the uniform comes off.
-            </p>
-            <p>
-              No Veteran should ever feel forgotten, abandoned, or alone. Support
-              means creating communities where Veterans know they still have
-              purpose, belonging, and a future.
-            </p>
-            <p>
-              Because these aren&rsquo;t simply statistics. These are our
-              brothers. Our sisters. Our parents. Our children. Our neighbors.
-              Our friends.
-            </p>
-            <p className="font-serif text-3xl leading-tight text-navy sm:text-4xl">
-              They stood for us when we needed them. Now we must stand for them.
-            </p>
-            <p>Let us build a culture where every Veteran knows:</p>
           </div>
 
-          <ul className="mt-8 space-y-2 border-l-2 border-ocean/40 pl-6">
-            {affirmations.map((line) => (
-              <li key={line} className="font-serif text-3xl text-ocean sm:text-4xl">
-                {line}
-              </li>
-            ))}
-          </ul>
-
-          <p className="mt-10 text-lg leading-relaxed text-navy/75">
-            Our heroes protected our future. Now it is our turn to protect
-            theirs.
-          </p>
-
-          <ul className="mt-10 grid gap-4 sm:grid-cols-3">
-            {pledges.map((line) => (
-              <li
-                key={line}
-                className="border-t border-navy/20 pt-4 text-[12px] tracking-[0.18em] uppercase text-navy"
-              >
-                {line}
-              </li>
-            ))}
-          </ul>
-
-          <p className="mt-12 font-serif text-2xl leading-snug text-navy sm:text-3xl">
-            Let&rsquo;s never stop showing up for Veterans who showed up for all
-            of us.
-          </p>
+          <div className="mt-10">
+            <Button href="/veterans" variant="light">
+              Our commitment
+            </Button>
+          </div>
         </div>
       </div>
     </section>

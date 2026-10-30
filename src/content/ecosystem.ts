@@ -51,8 +51,8 @@ export const ecosystem: readonly EcosystemItem[] = [
       "Natural climate systems",
       "Modular architecture",
     ],
-    image: "/images/lifehouse-dome.jpg",
-    imageAlt: "A LifeHouse: a translucent dome over a red timber home in a snowy landscape at dusk.",
+    image: "/images/lifehouse-dome.png",
+    imageAlt: "A LifeHouse: a geodesic glass dome with a timber base and circular deck, lit from within.",
     infographic: {
       src: "/images/lifehouse-core-principle.jpg",
       alt: "LifeHouse, the core principle: everything essential within its footprint, from water harvesting and food production to interior climate and independent infrastructure. Below, the existential choice: legacy construction, built to extract, versus the open-source LifeHouse, built to regenerate.",

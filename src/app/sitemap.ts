@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ecosystem",
     ...(ecosystemPagesLive ? ecosystem.map((item) => `/ecosystem/${item.slug}`) : []),
     "/contact",
+    "/veterans",
     "/privacy",
     "/terms",
     "/intellectual-property",
