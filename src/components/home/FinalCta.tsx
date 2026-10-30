@@ -25,7 +25,7 @@ export function FinalCta() {
           work together is possible.
         </p>
         <p className="editorial-shadow mt-8 font-serif text-4xl text-cyan sm:text-5xl lg:text-6xl">
-          Say yes to life.
+          Say YES to Life
         </p>
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
           <Button href="/contact">Build with us</Button>

@@ -8,6 +8,7 @@ export const footerNav = [
   { href: "/", label: "Home" },
   { href: "/#mission", label: "Mission & Vision" },
   { href: "/ecosystem", label: "Ecosystem" },
+  { href: "/veterans", label: "Veterans" },
   { href: "/contact", label: "Contact" },
 ] as const;
 

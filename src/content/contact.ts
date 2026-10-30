@@ -17,8 +17,8 @@ export const contactIntents = [
     id: "lifehouse",
     label: "LifeHouse",
     statement: "A home designed as an integrated life-support system, not only as shelter.",
-    image: "/images/lifehouse-dome.jpg",
-    imageAlt: "A LifeHouse: a translucent dome over a red timber home in the snow.",
+    image: "/images/lifehouse-dome.png",
+    imageAlt: "A LifeHouse: a geodesic glass dome with a timber base and circular deck, lit from within.",
   },
   {
     id: "demonstration",
