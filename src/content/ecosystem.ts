@@ -112,7 +112,7 @@ export const ecosystem: readonly EcosystemItem[] = [
 ];
 
 /** Flip to true to make ecosystem cards and footer links open their detail pages. */
-export const ecosystemPagesLive = false;
+export const ecosystemPagesLive = true;
 
 export function getEcosystemItem(slug: string) {
   return ecosystem.find((item) => item.slug === slug);
