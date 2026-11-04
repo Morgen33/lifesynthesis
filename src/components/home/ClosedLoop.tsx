@@ -19,16 +19,20 @@ export function ClosedLoop() {
             Closed loop
           </p>
           <h2 className="mt-4 font-serif text-4xl leading-[0.95] text-white sm:text-5xl lg:text-6xl">
-            Nothing wasted.
+            Nothing Wasted.
+            <br />
+            Everything Regenerated.
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ice/75">
-            Rain becomes water. Water nourishes plants. Plants become food. Food
-            sustains people. People return organics. Organics become nutrients —
-            and the cycle begins again.
+            At the heart of a regenerative living system is one fundamental
+            principle: Nature wastes nothing. Everything has a purpose, and every
+            output becomes an opportunity to create new Life.
           </p>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ice/75">
-            Every LifeSynthesis system is designed as a living loop: resources
-            circulate, abundance renews, and waste becomes the next beginning.
+            The Closed Ecological Life Support System is designed around the
+            interconnected cycles of nature, where rain, water, plants, food,
+            people, organic matter, and nutrients work together in a continuous
+            cycle of renewal.
           </p>
         </Reveal>
       </div>
