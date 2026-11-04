@@ -6,8 +6,8 @@ export function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
       <Image
-        src="/images/closing-nature.jpg"
-        alt="Sunrise over misty mountains, a calm lake and pine forest."
+        src="/images/hero-night-lake.jpg"
+        alt="Starry night sky and Milky Way over a calm moonlit lake."
         fill
         priority
         className="object-cover"

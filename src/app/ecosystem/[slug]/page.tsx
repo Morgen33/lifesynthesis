@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EcosystemMedia } from "@/components/ecosystem/EcosystemMedia";
-import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
 import { ecosystem, getEcosystemItem } from "@/content/ecosystem";
 
@@ -22,6 +21,10 @@ export async function generateMetadata({
   return { title: item.title, description: item.summary };
 }
 
+function paragraphs(text: string) {
+  return text.split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
+}
+
 export default async function EcosystemItemPage({
   params,
 }: PageProps<"/ecosystem/[slug]">) {
@@ -32,14 +35,23 @@ export default async function EcosystemItemPage({
   const index = ecosystem.findIndex((e) => e.slug === item.slug);
   const prev = ecosystem[(index - 1 + ecosystem.length) % ecosystem.length];
   const next = ecosystem[(index + 1) % ecosystem.length];
+  const bodyParagraphs = paragraphs(item.body);
 
   return (
     <>
-      <PageHero
-        kicker={`Ecosystem / ${item.title}`}
-        title={item.headline}
-        lede={item.body}
-      />
+      <header className="bg-navy px-5 pb-12 pt-36 lg:px-10 lg:pb-16 lg:pt-44">
+        <div className="mx-auto max-w-[1100px]">
+          <p className="text-[11px] tracking-[0.28em] uppercase text-crystal">
+            Ecosystem / {item.title}
+          </p>
+          <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            {item.headline}
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-ice/65 sm:text-lg">
+            {item.summary}
+          </p>
+        </div>
+      </header>
 
       <div className="px-5 lg:px-10">
         {item.infographic ? (
@@ -53,7 +65,7 @@ export default async function EcosystemItemPage({
                 : "max-w-[1100px]"
             }`}
           >
-            <span className="block overflow-hidden rounded-sm border border-white/10 transition group-hover:border-cyan/60">
+            <span className="block overflow-hidden rounded-2xl border border-white/10 transition group-hover:border-cyan/60">
               <Image
                 src={item.infographic.src}
                 alt={item.infographic.alt}
@@ -69,7 +81,7 @@ export default async function EcosystemItemPage({
             </span>
           </a>
         ) : (
-          <div className="relative mx-auto aspect-[16/9] max-w-[1100px] overflow-hidden rounded-sm">
+          <div className="relative mx-auto aspect-[16/9] max-w-[1100px] overflow-hidden rounded-2xl border border-white/10">
             <EcosystemMedia
               image={item.image}
               imageAlt={item.imageAlt}
@@ -81,27 +93,45 @@ export default async function EcosystemItemPage({
         )}
       </div>
 
-      <div className="mx-auto max-w-[1100px] px-5 py-20 lg:px-10">
-        {item.features.length > 0 ? (
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {item.features.map((feature) => (
-              <li
-                key={feature}
-                className="border-t border-cyan/30 pt-4 text-[12px] tracking-[0.18em] uppercase text-ice"
+      <section className="px-5 py-20 lg:px-10 lg:py-28">
+        <div className="mx-auto grid max-w-[1100px] gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.8fr)] lg:gap-20">
+          <div className="space-y-7">
+            {bodyParagraphs.map((paragraph) => (
+              <p
+                key={paragraph.slice(0, 56)}
+                className="text-lg leading-[1.75] text-ice/80 sm:text-xl sm:leading-[1.7]"
               >
-                {feature}
-              </li>
+                {paragraph}
+              </p>
             ))}
-          </ul>
-        ) : null}
+          </div>
 
-        <div className="mt-16 flex flex-col gap-3 sm:flex-row">
+          <aside className="lg:pt-1">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-7 sm:p-8">
+              <p className="text-[11px] tracking-[0.28em] uppercase text-crystal">
+                Capabilities
+              </p>
+              <ul className="mt-6 space-y-0">
+                {item.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="border-t border-white/10 py-4 text-sm leading-snug text-ice first:border-t-0 first:pt-0"
+                  >
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <div className="mx-auto mt-16 flex max-w-[1100px] flex-col gap-3 sm:flex-row">
           <Button href={item.contactHref}>Talk to us about {item.title}</Button>
           <Button href="/ecosystem" variant="ghost">
             Back to ecosystem
           </Button>
         </div>
-      </div>
+      </section>
 
       <nav
         aria-label="Ecosystem"
