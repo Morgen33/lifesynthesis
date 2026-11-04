@@ -21,7 +21,7 @@ export function FinalCta() {
           Regenerative infrastructure for a resilient civilization.
         </p>
         <h2 className="editorial-shadow max-w-4xl font-serif text-5xl leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl">
-          Say YES to Life
+          Build FOR humanity
         </h2>
         <p className="mt-8 max-w-2xl text-base leading-relaxed text-ice/80 sm:text-lg">
           LifeSynthesis designs homes, farms and communities that grow food,
