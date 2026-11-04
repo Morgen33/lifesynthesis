@@ -15,13 +15,15 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-navy/50" />
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-4xl flex-col items-center justify-center px-5 py-32 text-center">
-        <Logo stacked priority />
-        <p className="mt-10 max-w-4xl font-serif text-4xl leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+        <p className="max-w-4xl font-serif text-4xl leading-[0.95] text-white sm:text-6xl lg:text-7xl">
           Harnessing the science of Life with innovative technology
         </p>
         <p className="editorial-shadow mt-8 font-serif text-4xl text-cyan sm:text-5xl lg:text-6xl">
           Build FOR humanity
         </p>
+        <div className="mt-10">
+          <Logo stacked priority />
+        </div>
         <h1 className="mt-10 font-serif text-4xl leading-[0.95] text-white sm:text-6xl lg:text-7xl">
           What if the building itself
           <br />
