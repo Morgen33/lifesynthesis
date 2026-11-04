@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Veterans() {
   return (
-    <section id="veterans" className="bg-ice px-5 py-28 text-navy lg:px-10 lg:py-36">
+    <section id="veterans" className="scroll-mt-24 bg-ice px-5 py-28 text-navy lg:px-10 lg:py-36">
       <div className="mx-auto grid max-w-[1400px] gap-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <div className="overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(11,39,68,0.18)]">
