@@ -74,9 +74,6 @@ export function ContactExperience({
           <p className="mt-8 max-w-md border-l border-cyan/50 pl-5 text-base leading-relaxed text-ice/70">
             {active.statement}
           </p>
-          <p className="mt-16 font-serif text-2xl text-ice/55 sm:text-3xl">
-            What should human infrastructure become?
-          </p>
         </div>
 
         <div className="glass relative overflow-hidden rounded-sm border border-white/12 p-6 shadow-[0_40px_120px_rgba(0,0,0,0.45)] sm:p-10">

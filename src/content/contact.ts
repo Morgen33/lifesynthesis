@@ -1,43 +1,46 @@
+const contactStatement =
+  "A first conversation about what LifeSynthesis could become on your land or in your city.";
+
 export const contactIntents = [
   {
     id: "general",
     label: "General",
-    statement: "A first conversation about what LifeSynthesis could become on your land or in your city.",
+    statement: contactStatement,
     image: "/images/closing-nature.jpg",
     imageAlt: "Sunrise over misty mountains, a calm lake and pine forest.",
   },
   {
     id: "lifepod",
     label: "LifePod",
-    statement: "A compact ecological environment — food, water and climate in a modular structure.",
+    statement: contactStatement,
     image: "/videos/lifepod-poster.jpg",
     imageAlt: "A LifePod with glass dome and growing beds.",
   },
   {
     id: "lifehouse",
     label: "LifeHouse",
-    statement: "A home designed as an integrated Life-support system, not only as shelter.",
+    statement: contactStatement,
     image: "/images/lifehouse-dome.jpg",
     imageAlt: "A LifeHouse: a geodesic glass dome with a timber base and circular deck, lit from within.",
   },
   {
     id: "demonstration",
     label: "Demonstration site",
-    statement: "A place people can walk into — LifePods, LifeHouses and living systems in person.",
+    statement: contactStatement,
     image: "/images/closing-nature.jpg",
     imageAlt: "Sunrise over misty mountains, a calm lake and pine forest.",
   },
   {
     id: "research",
     label: "Research",
-    statement: "Collaboration on closed ecological systems, sensing, and measurement before claims.",
+    statement: contactStatement,
     image: "/images/closing-nature.jpg",
     imageAlt: "Sunrise over misty mountains, a calm lake and pine forest.",
   },
   {
     id: "partner",
     label: "Partnership",
-    statement: "Architects, engineers, developers and operators building the next system with us.",
+    statement: contactStatement,
     image: "/images/closing-nature.jpg",
     imageAlt: "Sunrise over misty mountains, a calm lake and pine forest.",
   },
