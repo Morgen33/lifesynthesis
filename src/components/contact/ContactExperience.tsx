@@ -15,8 +15,10 @@ const fieldClass =
 
 export function ContactExperience({
   priority = true,
+  embedded = false,
 }: {
   priority?: boolean;
+  embedded?: boolean;
 }) {
   const urlIntent = useSearchParams().get("intent");
   const [intent, setIntent] = useState<ContactIntentId>(
@@ -29,9 +31,15 @@ export function ContactExperience({
   }
   const [sent, setSent] = useState(false);
   const active = getContactIntent(intent);
+  const Heading = embedded ? "h2" : "h1";
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden">
+    <section
+      id={embedded ? "contact" : undefined}
+      className={`relative scroll-mt-24 overflow-hidden ${
+        embedded ? "min-h-[90svh]" : "min-h-[100svh]"
+      }`}
+    >
       <Image
         src={active.image}
         alt={active.imageAlt}
@@ -44,14 +52,20 @@ export function ContactExperience({
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/50" />
       <div className="pointer-events-none absolute inset-0 grid-overlay opacity-20 mix-blend-overlay" />
 
-      <div className="relative z-10 mx-auto grid min-h-[100svh] max-w-[1600px] items-center gap-12 px-5 pb-20 pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pt-36">
+      <div
+        className={`relative z-10 mx-auto grid max-w-[1600px] items-center gap-12 px-5 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 ${
+          embedded
+            ? "min-h-[90svh] py-24 lg:py-32"
+            : "min-h-[100svh] pt-32 lg:pt-36"
+        }`}
+      >
         <div>
           <p className="text-[11px] tracking-[0.32em] uppercase text-cyan">
             Contact · {active.label}
           </p>
-          <h1 className="editorial-shadow mt-5 max-w-xl font-serif text-5xl leading-[0.92] text-white sm:text-7xl lg:text-8xl">
+          <Heading className="editorial-shadow mt-5 max-w-xl font-serif text-5xl leading-[0.92] text-white sm:text-7xl lg:text-8xl">
             Start a conversation.
-          </h1>
+          </Heading>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-ice/80">
             Architects, engineers, landowners, municipalities, researchers and
             development partners — tell us what you want to build.

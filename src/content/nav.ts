@@ -2,7 +2,7 @@ export const primaryNav = [
   { href: "/#mission", label: "Mission" },
   { href: "/ecosystem", label: "Ecosystem" },
   { href: "/#veterans", label: "Veterans" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export const footerNav = [
