@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 const SRC = "/videos/lifesynthesis-system.mp4";
 const POSTER = "/videos/lifesynthesis-system-poster.jpg";
 const LABEL =
-  "LifeSynthesis: not just survival, regeneration. LifePods, LifeHouses, LifeFarms and CannaPods working as one regenerative life-support system.";
+  "LifeSynthesis: not just survival, regeneration. LifePods, LifeHouses, LifeFarms and CannaPods working as one regenerative Life-support system.";
 
 export function SystemVideo() {
   const inline = useRef<HTMLVideoElement>(null);

@@ -193,7 +193,7 @@ export default async function EcosystemItemPage({
               Build with {item.title}
             </p>
             <h2 className="editorial-shadow mt-5 max-w-3xl font-serif text-4xl leading-[0.95] text-white sm:text-5xl lg:text-6xl">
-              Ready to bring this system to life?
+              Ready to bring this system to Life?
             </h2>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button href={item.contactHref}>

@@ -10,7 +10,7 @@ export function SiteFooter() {
         <div>
           <Logo />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-ice/60">
-            Regenerating the systems that sustain life.
+            Regenerating the systems that sustain Life.
           </p>
         </div>
         <div className="grid gap-10 sm:grid-cols-3">

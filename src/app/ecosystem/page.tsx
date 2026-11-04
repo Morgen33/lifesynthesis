@@ -14,7 +14,7 @@ export default function EcosystemPage() {
       <PageHero
         kicker="Ecosystem"
         title="Through our interconnected initiatives LifeHouse, LifePods, LifeFarms, and CannaPods humanity builds this vision to Life."
-        lede="Every LifeSynthesis system grows food, cycles water and supports life. Pick the scale that fits what you want to build."
+        lede="Every LifeSynthesis system grows food, cycles water and supports Life. Pick the scale that fits what you want to build."
       />
       <div className="mx-auto max-w-[1400px] px-5 pb-20 lg:px-10">
         <EcosystemGrid />

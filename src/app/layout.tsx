@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     template: "%s — LifeSynthesis",
   },
   description:
-    "Impact focused company redesigning the systems that advance life with healthy homes, regenerative agricultural Pods, and sustainable communities.",
+    "Impact focused company redesigning the systems that advance Life with healthy homes, regenerative agricultural Pods, and sustainable communities.",
   keywords: [
     "regenerative infrastructure",
     "LifePod",
     "LifeHouse",
-    "closed ecological life support",
+    "closed ecological Life support",
     "controlled environment agriculture",
     "SolaRoof",
   ],
