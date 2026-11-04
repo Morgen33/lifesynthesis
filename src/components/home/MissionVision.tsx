@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { LoopVideo } from "@/components/home/LoopVideo";
 
 const statements = [
   {
@@ -42,11 +43,25 @@ export function MissionVision() {
           ))}
         </div>
 
-        <Reveal delay={0.2}>
-          <p className="mt-20 border-t border-navy/15 pt-12 font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
-            Everything begins with life
-          </p>
-        </Reveal>
+        <div className="mt-20 grid items-center gap-10 border-t border-navy/15 pt-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
+          <Reveal>
+            <p className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
+              Everything begins with life
+            </p>
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-navy/70">
+              Food, water, shelter, energy, and ecology — the essential systems
+              that sustain humanity, designed to work as one.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <LoopVideo
+              src="/videos/five-systems.mp4"
+              poster="/videos/five-systems-poster.jpg"
+              label="Food, water, shelter, energy, and ecology working as one regenerative system."
+              frameClassName="border border-navy/10 shadow-[0_30px_80px_rgba(11,39,68,0.16)]"
+            />
+          </Reveal>
+        </div>
       </div>
     </section>
   );
