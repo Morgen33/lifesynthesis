@@ -67,8 +67,7 @@ export function ContactExperience({
             Start a conversation.
           </Heading>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-ice/80">
-            Architects, engineers, landowners, municipalities, researchers and
-            development partners — tell us what you want to build.
+            Tell us what you want to build.
           </p>
           <p className="mt-8 max-w-md border-l border-cyan/50 pl-5 text-base leading-relaxed text-ice/70">
             {active.statement}

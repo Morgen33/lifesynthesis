@@ -92,9 +92,9 @@ export const ecosystem: readonly EcosystemItem[] = [
   {
     slug: "cannapod",
     title: "CannaPod",
-    summary: "Closed ecological life support system specialized in cultivating Hemp and Cannabis.",
-    headline: "The next generation of cannabis and hemp agriculture.",
-    body: "The future of cannabis agriculture isn't about growing more plants. It's about growing better plants, with greater consistency, intelligence, traceability and control.",
+    summary: "CannaPods specialize in growing cannabis and hemp agriculture.",
+    headline: "Engineering the Future of Cannabis & Hemp Cultivation",
+    body: "CannaPods are designed to redefine how high-value cannabis and hemp are cultivated by bringing agriculture into a new era of precision-controlled, data-driven growing environments. They combine the science of plant biology, advanced environmental technology, innovative growing strategies, and intelligent resource management to create highly optimized conditions for year-round cultivation, despite the climate conditions on the outside.\n\nThe opportunity is not just growing cannabis and hemp. It’s understanding, controlling, and optimizing every stage of the growing process to achieve greater consistency, quality, efficiency, and predictability.\n\nTraditional cultivation often depends on environmental conditions that are difficult to control. Weather fluctuations, temperature, humidity, pests, disease pressure, inconsistent genetics, water availability, and variations between growing cycles can all influence plant health, quality, and production outcomes. CannaPods are designed to change that equation.\n\nBy integrating regenerative growing principles, living soil systems, water conservation, energy efficiency, and biological innovation, CannaPods can become an integral part of the broader LifeSynthesis ecosystem, connecting botanical agriculture with LifeFarms, renewable energy, circular resource management, and emerging plant-based industries.\n\nCannaPods represent the convergence of nature, science, and technology, creating a new generation of closed-environment agriculture designed to cultivate quality, unlock potential, and grow an abundance of cannabis and hemp.",
     features: [
       "Controlled climate and humidity",
       "Precision irrigation and nutrients",
