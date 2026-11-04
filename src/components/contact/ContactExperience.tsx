@@ -30,6 +30,8 @@ export function ContactExperience({
     if (isContactIntent(urlIntent)) setIntent(urlIntent);
   }
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const active = getContactIntent(intent);
   const Heading = embedded ? "h2" : "h1";
 
@@ -89,16 +91,45 @@ export function ContactExperience({
                 We’ll take it from here.
               </p>
               <p className="mt-6 max-w-sm text-ice/70">
-                This demonstration form does not transmit yet. When the
-                partnership inbox is connected, messages like yours will arrive
-                there.
+                Thank you. Your message is on its way to the LifeSynthesis team.
               </p>
             </div>
           ) : (
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                setSent(true);
+                setError(null);
+                setSubmitting(true);
+                const form = e.currentTarget;
+                const data = new FormData(form);
+                try {
+                  const res = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      name: data.get("name"),
+                      email: data.get("email"),
+                      organization: data.get("organization"),
+                      message: data.get("message"),
+                      intent,
+                    }),
+                  });
+                  const payload = (await res.json().catch(() => ({}))) as {
+                    error?: string;
+                  };
+                  if (!res.ok) {
+                    setError(
+                      payload.error ??
+                        "Could not send your message. Please try again.",
+                    );
+                    return;
+                  }
+                  setSent(true);
+                } catch {
+                  setError("Could not send your message. Please try again.");
+                } finally {
+                  setSubmitting(false);
+                }
               }}
             >
               <p className="text-[11px] tracking-[0.24em] uppercase text-silver">
@@ -183,11 +214,18 @@ export function ContactExperience({
                 />
               </label>
 
+              {error ? (
+                <p className="mt-8 text-sm text-red-300" role="alert">
+                  {error}
+                </p>
+              ) : null}
+
               <button
                 type="submit"
-                className="mt-10 inline-flex w-full items-center justify-center rounded-full bg-ice px-8 py-4 text-[11px] font-medium tracking-[0.22em] uppercase text-navy transition-colors hover:bg-white sm:w-auto"
+                disabled={submitting}
+                className="mt-10 inline-flex w-full items-center justify-center rounded-full bg-ice px-8 py-4 text-[11px] font-medium tracking-[0.22em] uppercase text-navy transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
               >
-                Begin the conversation
+                {submitting ? "Sending…" : "Begin the conversation"}
               </button>
             </form>
           )}
