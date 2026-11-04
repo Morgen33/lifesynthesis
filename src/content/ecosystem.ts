@@ -33,7 +33,7 @@ export const ecosystem: readonly EcosystemItem[] = [
       "Thermal storage",
       "Environmental controls",
     ],
-    image: "/images/lifepod.jpg",
+    image: "/images/lifepod-stage.jpg",
     imageAlt:
       "A LifePod: a glass dome with vertical growing beds, workbench, and entry module on a dark base.",
     video: "/videos/lifepod.mp4",
@@ -73,7 +73,7 @@ export const ecosystem: readonly EcosystemItem[] = [
       "Environmental monitoring",
       "Modular, repeatable systems",
     ],
-    image: "/images/lifefarm-vault.jpg",
+    image: "/images/lifefarm-stage.jpg",
     imageAlt: "The LifeFarm: a vaulted glass greenhouse with a metallic arched frame on a solid base.",
     infographic: {
       src: "/images/lifefarm-infographic.jpg",
@@ -97,7 +97,7 @@ export const ecosystem: readonly EcosystemItem[] = [
       "Batch-level traceability",
       "Water and resource efficiency",
     ],
-    image: "/images/cannapod-dome.jpg",
+    image: "/images/cannapod-stage.jpg",
     imageAlt: "The CannaPod: a glass dome with an arched entrance, filled with rows of cannabis plants.",
     infographic: {
       src: "/images/cannapod-canopy-infographic.jpg",

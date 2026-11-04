@@ -11,7 +11,7 @@ export function EcosystemGrid() {
       {ecosystem.map((item, i) => {
         const content = (
           <>
-            <div className="relative aspect-[16/10] overflow-hidden">
+            <div className="relative aspect-[16/10] overflow-hidden bg-black">
               <EcosystemMedia
                 image={item.image}
                 imageAlt={item.imageAlt}
