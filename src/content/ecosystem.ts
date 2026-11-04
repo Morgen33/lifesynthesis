@@ -56,12 +56,6 @@ export const ecosystem: readonly EcosystemItem[] = [
     ],
     image: "/images/lifehouse-dome.jpg",
     imageAlt: "A LifeHouse: a geodesic glass dome with a timber base and circular deck, lit from within.",
-    infographic: {
-      src: "/images/lifehouse-core-principle.jpg",
-      alt: "LifeHouse, the core principle: everything essential within its footprint, from water harvesting and food production to interior climate and independent infrastructure. Below, the existential choice: legacy construction, built to extract, versus the open-source LifeHouse, built to regenerate.",
-      width: 682,
-      height: 1024,
-    },
     contactHref: "/contact?intent=lifehouse",
   },
   {
