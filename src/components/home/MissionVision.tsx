@@ -3,11 +3,11 @@ import { Reveal } from "@/components/motion/Reveal";
 const statements = [
   {
     label: "Our mission",
-    body: "Redesign the systems that sustain human life, bringing housing, food, water, energy, technology and ecology together into regenerative infrastructure.",
+    body: "Building for Life. Building infrastructure for Humanity. Healthy Food Production. People gain access to livingry that restores balance, promotes health, regenerates our planet, and creates a more abundant future for generations.",
   },
   {
     label: "Our vision",
-    body: "A world where the places we live produce food, conserve water, restore ecosystems and strengthen communities, with technology helping people work with nature.",
+    body: "The future of humanity and the planet depends on how we work with the essential systems that sustain life: the environments we live in, the food we grow, the resources we produce, the technologies we innovate that work with nature, and the sustainable communities we build together.",
   },
 ] as const;
 
@@ -19,8 +19,11 @@ export function MissionVision() {
           <p className="text-[11px] tracking-[0.28em] uppercase text-ocean/70">
             Who we are
           </p>
-          <h2 className="mt-4 max-w-4xl font-serif text-4xl leading-[0.95] sm:text-6xl">
-            A regenerative infrastructure and human-habitat company.
+          <h2 className="mt-4 max-w-4xl font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
+            Impact focused company redesigning the systems that advance life with
+            healthy homes, regenerative agricultural Pods, sustainable
+            communities merging patented technologies, sacred geometry and the
+            science of living systems.
           </h2>
         </Reveal>
 
@@ -38,6 +41,12 @@ export function MissionVision() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.2}>
+          <p className="mt-20 border-t border-navy/15 pt-12 font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
+            Everything begins with life
+          </p>
+        </Reveal>
       </div>
     </section>
   );

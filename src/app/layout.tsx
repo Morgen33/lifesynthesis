@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s — LifeSynthesis",
   },
   description:
-    "LifeSynthesis redesigns the systems that sustain human life — housing, food, water, energy, technology and ecology as regenerative infrastructure.",
+    "Impact focused company redesigning the systems that advance life with healthy homes, regenerative agricultural Pods, and sustainable communities.",
   keywords: [
     "regenerative infrastructure",
     "LifePod",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "SolaRoof",
   ],
   openGraph: {
-    title: "LifeSynthesis — The future isn’t built. It’s grown.",
+    title: "LifeSynthesis — Build FOR humanity",
     description:
-      "Designing a new operating system for human life: regenerative architecture, food, water, energy and ecology.",
+      "Harnessing the science of Life with innovative technology. Building infrastructure for Humanity.",
     type: "website",
     images: ["/images/closing-nature.jpg"],
   },

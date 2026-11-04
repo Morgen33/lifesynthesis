@@ -21,7 +21,7 @@ export const ecosystem: readonly EcosystemItem[] = [
   {
     slug: "lifepod",
     title: "LifePod",
-    summary: "Personal regenerative food-production system.",
+    summary: "Regenerative agricultural Pod.",
     headline: "A little space to make the world a better place.",
     body: "A compact controlled ecological environment that brings food production, water management and climate regulation together in one modular structure.",
     features: [
@@ -40,7 +40,7 @@ export const ecosystem: readonly EcosystemItem[] = [
   {
     slug: "lifehouse",
     title: "LifeHouse",
-    summary: "A home that helps sustain the life inside it.",
+    summary: "Healthy home, grows food.",
     headline: "What if your home helped sustain your life?",
     body: "LifeHouse turns the home into an integrated life-support system: food, water, energy and climate designed as one habitat, not a stack of add-ons.",
     features: [
@@ -88,7 +88,7 @@ export const ecosystem: readonly EcosystemItem[] = [
   {
     slug: "cannapod",
     title: "CannaPod",
-    summary: "Controlled-environment cannabis and hemp cultivation.",
+    summary: "Closed ecological life support system specialized in cultivating Hemp and Cannabis.",
     headline: "The next generation of cannabis and hemp agriculture.",
     body: "The future of cannabis agriculture isn't about growing more plants. It's about growing better plants, with greater consistency, intelligence, traceability and control.",
     features: [

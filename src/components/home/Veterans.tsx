@@ -38,6 +38,20 @@ export function Veterans() {
             <p className="font-serif text-3xl leading-tight text-navy sm:text-4xl">
               Service may end. Our commitment can not.
             </p>
+            <p>
+              Many veterans have found themselves fighting another battle after
+              their military service ended: the battle to access housing, food,
+              community and support.
+            </p>
+            <p>
+              We must never allow the Veterans who stood up for us to be
+              forgotten. The mission must be bigger than managing problems after
+              they occur. We must build systems that prevent suffering, hunger
+              and homelessness for our brave heroes.
+            </p>
+            <p className="font-serif text-3xl leading-tight text-navy sm:text-4xl">
+              They served us. Now it&rsquo;s our turn to serve them.
+            </p>
           </div>
 
           <div className="mt-10">
