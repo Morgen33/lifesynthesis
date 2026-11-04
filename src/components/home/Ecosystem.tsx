@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Ecosystem() {
   return (
-    <section id="ecosystem" className="bg-[#0c3558] px-5 py-28 lg:px-10 lg:py-36">
+    <section id="ecosystem" className="bg-navy px-5 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>

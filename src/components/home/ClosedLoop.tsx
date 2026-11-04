@@ -3,7 +3,7 @@ import { LoopVideo } from "@/components/home/LoopVideo";
 
 export function ClosedLoop() {
   return (
-    <section className="bg-navy px-5 py-28 text-ice lg:px-10 lg:py-36">
+    <section className="bg-ocean px-5 py-28 text-ice lg:px-10 lg:py-36">
       <div className="mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
         <Reveal>
           <LoopVideo
